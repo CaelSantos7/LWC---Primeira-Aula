@@ -1,0 +1,24 @@
+<template>
+	<lightning-card>
+
+		<div class="slds-m-around_medium" if:true={visivel}>
+		<h1 class="slds-text-heading_large" style="text-align:center">Trazer dados da Classe</h1>
+		<p>Nome: {nome} </p>
+		<p>Telefone: {telefone} </p>
+		<p>Cpf: {cpf} </p>
+		<p>Idade: {idade} </p>
+		</div>
+
+		<div class="slds-m-around_medium" if:false={visivel}>
+		<h2 class="slds-text-heading_large" style="text-align:center">Outros dados</h2>
+		<p>Email: {email} </p>
+		<p>Instagram: {instagram} </p>
+		<p>LinkedIn: <a href={linkedIn} target="-blank">Clique aqui!</a></p>
+		</div>
+
+		<lightning-button variant="brand" label="Clack Boom" title="Alterar Visibilidade" onclick={visibilidade} class="slds-m-left_x-small"></lightning-button>
+
+		<lightning-button variant="brand" label="Altera Valor" title="Alterar Valores" onclick={alterarValores} class="slds-m-left_x-small"></lightning-button>
+
+	</lightning-card>
+</template>
